@@ -5,10 +5,27 @@ var foodUrl =
 //need to fill in what the cuisine type is
 
 var ID = "12caf7ad";
+var apiArray = [];
+var recipeArray = [];
+var button = document.querySelector('.button');
+var foodImage =document.getElementById('food-image')
 
+
+append
 // food
 //add click event
 //add fetch syntax
+
+// get checked value 
+function getRecipe(event){
+  event.preventDefault();
+  getApi(foodUrl);
+}
+// overarching fucntion for when button is pressed that calls the other fucntions
+// change to .on?
+button.addEventListener("click", getRecipe)
+// get api already randomizes recpie chocie on refresh FIGURE OUT HOW
+//skipped the api array since it aleady randomizes a specific recipe
 function getApi(foodUrl) {
   fetch(foodUrl + "American")
     .then(function (response) {
@@ -23,10 +40,29 @@ function getApi(foodUrl) {
       // Make sure to look at the response in the console and read how 404 response is structured.
       console.log(data.hits[0].recipe.label);
       console.log(data); //when you start building the html in js
+      // below is the functions we deciced on jsut added as code
+      recipeArray.push(data.hits[0]);
     });
 }
+// getApi(foodUrl);
 
-getApi(foodUrl);
+function checkHealthLabels(){};
+
+function getRecipeLabel(){};
+// image and source are both urls but diffrent locations
+function getImage(){};
+
+function getSource(){};
+
+function getIngredients(){};
+
+
+
+
+
+
+
+
 //drinks- same as above
 //add click event
 
