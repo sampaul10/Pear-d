@@ -1,3 +1,4 @@
-.hero, .title, li, ul{
+/* took out li and ul for the aligning */ 
+.hero, .title {
     text-align: center;
 }
