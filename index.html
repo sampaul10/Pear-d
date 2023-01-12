@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="assets/style.css">
 </head>
-
 <body>
   <section class="hero is-link">
     <div class="hero-body">
@@ -26,31 +25,31 @@
           <ul>
             <div class="control">
               <label class="radio">
-                <input type="radio" name="answer">
-                Vegetarian <!--record random values available--> 
+                <input type="radio" name="answer" value="vegetarian" checked>
+                Vegetarian <!--record random values available-->
               </label>
             </div>
             <div class="control">
               <label class="radio">
-                <input type="radio" name="answer">
+                <input type="radio" name="answer" value="Mexican"> 
                 Mexican
               </label>
             </div>
             <div class="control">
               <label class="radio">
-                <input type="radio" name="answer">
+                <input type="radio" name="answer" value="Italian">
                 Italian
               </label>
             </div>
             <div class="control">
               <label class="radio">
-                <input type="radio" name="answer">
+                <input type="radio" name="answer" value="Chinese">
                 Chinese
               </label>
             </div>
             <div class="control">
               <label class="radio">
-                <input type="radio" name="answer">
+                <input type="radio" name="answer" value="Japanese">
                 Japanese
               </label>
             </div>
@@ -58,7 +57,7 @@
         </div>
         <footer class="card-footer">
           <div class="card-footer-item">
-            <a href="#" class="button is-info">Search</a>
+            <a href="#" class="button is-info" id="food">Search</a>
           </div>
         </footer>
       </div>
@@ -70,44 +69,64 @@
           <ul>
             <div class="control">
               <label class="radio">
-                <input type="radio" name="answer">
+                <input type="radio" name="answer" value="Vodka" checked>
                 Vodka
               </label>
             </div>
             <div class="control">
               <label class="radio">
-                <input type="radio" name="answer">
+                <input type="radio" name="answer" value="Tequila">
                 Tequila
               </label>
             </div>
             <div class="control">
               <label class="radio">
-                <input type="radio" name="answer">
+                <input type="radio" name="answer" value="Whiskey">
                 Whiskey
               </label>
             </div>
             <div class="control">
               <label class="radio">
-                <input type="radio" name="answer">
+                <input type="radio" name="answer" value="Rum">
                 Rum
               </label>
             </div>
             <div class="control">
               <label class="radio">
-                <input type="radio" name="answer">
+                <input type="radio" name="answer" value="Gin">
                 Gin
               </label>
             </div>
         </div>
         <footer class="card-footer">
           <div class="card-footer-item">
-            <a href="#" class="button is-info">Search</a>
+            <a href="#" class="button is-info" id="cocktail">Search</a>
           </div>
         </footer>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="assets/script.js"></script>
+  </div>
+
+  <div class="columns">
+    <div class="column">
+      <div class="card" id="dinner">
+        <div class="card-content">
+          <h2 class="title"></h2>
+        </div>
+      </div>
+    </div>
+   
+      <div class="column">
+        <div class="card" id="drink">
+          <div class="card-content">
+            <h2 class="title"></h2>
+          </div>
+        </div>
+      </div>
+     
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="assets/script.js"></script>
+
 </body>
 
 </html>
