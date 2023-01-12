@@ -1,4 +1,9 @@
-/* took out li and ul for the aligning */ 
-.hero, .title {
-    text-align: center;
+
+.hero, .title{
+    text-align:center;
+    color: black;
+}
+
+.card{
+    background-color:lightgrey;
 }
