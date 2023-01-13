@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
   <section class="hero is-link">
     <div class="hero-body">
@@ -31,7 +32,7 @@
             </div>
             <div class="control">
               <label class="radio">
-                <input type="radio" name="answer" value="Mexican"> 
+                <input type="radio" name="answer" value="Mexican">
                 Mexican
               </label>
             </div>
@@ -106,26 +107,34 @@
       </div>
     </div>
   </div>
-
-  <div class="columns">
-    <div class="column">
-      <div class="card" id="dinner">
-        <div class="card-content">
-          <h2 class="title"></h2>
-        </div>
-      </div>
-    </div>
-   
+<div class="is-hidden">
+    <div class="columns">
       <div class="column">
-        <div class="card" id="drink">
+        <div class="card" id="dinner">
           <div class="card-content">
+            <figure class="image is-128x128">
+              <img src="">
+            </figure>
             <h2 class="title"></h2>
+            <a href="#" class="button is-info" id="food recipe">Click here for Recipe</a>
           </div>
         </div>
       </div>
-     
-      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-      <script src="assets/script.js"></script>
+
+      <div class="column">
+        <div class="card" id="drink">
+          <div class="card-content">
+            <figure class="image is-128x128">
+              <img src="">
+            </figure>
+            <h2 class="title"></h2>
+            <a href="#" class="button is-info" id="cocktail recipe">Click here for Recipe</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="assets/script.js"></script>
 
 </body>
 
