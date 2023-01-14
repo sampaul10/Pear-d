@@ -1,10 +1,31 @@
 
-.hero, .title{
+.hero{
     text-align:center;
-    color: black;
+    color: whitesmoke;
 }
+.title{
+    color:black
+}
+
+.button{
+    background-color: hsl(0, 90%, 96%);
+    color:black;
+    
+}
+
 
 .card{
+    background-image: linear-gradient(rgba(85, 83, 83, 0.925),rgba(153, 134, 105, 0.973));
     background-color:lightgrey;
+    text-align: left;
+    color: whitesmoke;
 }
 
+.header-image { 
+    background-image: url(https://pixabay.com/get/gc3a264e00ed3ffcfbe19f69e8901f725ce0548a798472dab165b4ea4fd0b06d7ae94adcad17276b1f031770357f10bc8b055b261c275e1d098d8454dc599e266862f3e495391af115d35ef6d9699fbff_1920.jpg775d2_1920.jpg);
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    background-color: #999;
+}
