@@ -44,6 +44,7 @@ function getDrink() {
       drinkName = data.drinks[randomDrink].strDrink; //stDrink taken from the data object
       console.log(drinkName);
       drinkImg = data.drinks[randomDrink].strDrinkThumb; //grabs the drink image
+
       //new API endpoint where you can use drink ID from the previous call
       var drinkByIdUrl =
         "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + idDrink;
