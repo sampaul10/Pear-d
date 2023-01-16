@@ -5,6 +5,15 @@
 }
 
 .card{
-    background-color:lightgrey;
+    background-color:yellow;
 }
 
+img {
+    height:auto;
+    width: auto;
+    float: middle;
+}
+
+#font {
+    font: oblique;
+}
