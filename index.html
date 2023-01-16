@@ -7,139 +7,136 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dinner & Cocktail</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body class="body" id="font" >
-  <section class="hero is-danger">
+<body>
+  <section class="hero is-link is-fullheight header-image">
     <div class="hero-body">
       <div class="container">
-        <h1 class="title is-1" >Stove Shaker</h1>
+        <h1 class="title is-1"> Dinner & Cocktail Recipe</h1>
+
+          <div class="columns">
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <h2 class="title dinner">Dinner Recipes</h2>
+                  <ul>
+                    <div class="control">
+                      <label class="radio">
+                        <input type="radio" name="American" value="American" checked>
+                        American 
+                      </label>
+                    </div>
+                    <div class="control">
+                      <label class="radio">
+                        <input type="radio" name="Mexican" value="Mexican">
+                        Mexican
+                      </label>
+                    </div>
+                    <div class="control">
+                      <label class="radio">
+                        <input type="radio" name="Italian" value="Italian">
+                        Italian
+                      </label>
+                    </div>
+                    <div class="control">
+                      <label class="radio">
+                        <input type="radio" name="Chinese" value="Chinese">
+                        Chinese
+                      </label>
+                    </div>
+                    <div class="control">
+                      <label class="radio">
+                        <input type="radio" name="Japanese" value="Japanese">
+                        Japanese
+                      </label>
+                    </div>
+                  </ul>
+                </div>
+                <footer class="card-footer">
+                  <div class="card-footer-item">
+                    <a href="#" class="button" id="food">Search</a>
+                  </div>
+                </footer>
+              </div>
+            </div>
+            <div class="column  ">
+              <div class="card">
+                <div class="card-content">
+                  <h2 class="title cocktail">Cocktail Recipes</h2>
+                  <ul>
+                    <div class="control">
+                      <label class="radio">
+                        <input type="radio" name="Vodka" value="Vodka" checked>
+                        Vodka
+                      </label>
+                    </div>
+                    <div class="control">
+                      <label class="radio">
+                        <input type="radio" name="Tequila" value="Tequila">
+                        Tequila
+                      </label>
+                    </div>
+                    <div class="control">
+                      <label class="radio">
+                        <input type="radio" name="Whiskey" value="Whiskey">
+                        Whiskey
+                      </label>
+                    </div>
+                    <div class="control">
+                      <label class="radio">
+                        <input type="radio" name="Rum" value="Rum">
+                        Rum
+                      </label>
+                    </div>
+                    <div class="control">
+                      <label class="radio">
+                        <input type="radio" name="Gin" value="Gin">
+                        Gin
+                      </label>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                  <div class="card-footer-item">
+                    <a href="#" class="button" id="cocktail">Search</a>
+                  </div>
+                </footer>
+              </div>
+            </div>
+          </div>
+          <!--<div class="is-hidden">-->
+          <div class="columns">
+            <div class="column">
+              <div class="card" id="dinner">
+                <div class="card-content">
+                  <figure class="image is-128x128">
+                    <img src="">
+                  </figure>
+                  <h2 class="title"></h2>
+                  <a href="#" class="button" id="food recipe">Click here for Recipe</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card" id="drink">
+                <div class="card-content">
+                  <figure class="image is-128x128">
+                    <img src="">
+                  </figure>
+                  <h2 class="title"></h2>
+                  <a href="#" class="button" id="cocktail recipe">Click here for Recipe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
   </section>
-
-  <section>
-    <img src="assets/Images/IMG_0377.jpg" alt="kitchen">
-  </section>
-
-  <div class="columns">
-    <div class="column">
-      <div class="card">
-        <div class="card-content">
-          <h2 class="title">Dinner Proposal</h2>
-          <ul>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="answer" value="vegetarian" checked>
-                Vegetarian <!--record random values available-->
-              </label>
-            </div>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="answer" value="Mexican">
-                Mexican
-              </label>
-            </div>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="answer" value="Italian">
-                Italian
-              </label>
-            </div>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="answer" value="Chinese">
-                Chinese
-              </label>
-            </div>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="answer" value="Japanese">
-                Japanese
-              </label>
-            </div>
-          </ul>
-        </div>
-        <footer class="card-footer">
-          <div class="card-footer-item">
-            <a href="#" class="button is-info" id="food">Search</a>
-          </div>
-        </footer>
-      </div>
-    </div>
-    <div class="column  ">
-      <div class="card">
-        <div class="card-content">
-          <h2 class="title">Cocktail</h2>
-          <ul>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="answer" value="Vodka" checked>
-                Vodka
-              </label>
-            </div>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="answer" value="Tequila">
-                Tequila
-              </label>
-            </div>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="answer" value="Whiskey">
-                Whiskey
-              </label>
-            </div>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="answer" value="Rum">
-                Rum
-              </label>
-            </div>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="answer" value="Gin">
-                Gin
-              </label>
-            </div>
-        </div>
-        <footer class="card-footer">
-          <div class="card-footer-item">
-            <a href="#" class="button is-info" id="cocktail">Search</a>
-          </div>
-        </footer>
-      </div>
-    </div>
-  </div>
-<!--<div class="is-hidden">-->
-    <div class="columns">
-      <div class="column">
-        <div class="card" id="dinner">
-          <div class="card-content">
-            <figure class="image is-128x128">
-              <img src="">
-            </figure>
-            <h2 class="title"></h2>
-            <a href="#" class="button is-info" id="food recipe">Click here for Recipe</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card" id="drink">
-          <div class="card-content">
-            <figure class="image is-128x128">
-              <img src="">
-            </figure>
-            <h2 class="title"></h2>
-            <a href="#" class="button is-info" id="cocktail recipe">Click here for Recipe</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="assets/script.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="assets/script.js"></script>
 
 </body>
 

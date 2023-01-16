@@ -18,14 +18,15 @@ var foodImage =document.getElementById('food-image');
 //add click event
 //add fetch syntax
 
-// get checked value 
-function getRecipe(event){
-  event.preventDefault();
-  if(document.getElementBy('vegetarian').checked){
-    console.log(document.getElementByValue('vegetarian').value);
-  };
-  getApi(foodUrl);
-}
+// get checked value CURRENTLY NOT IN USE/FUNCTIONAL
+// function getRecipe(event){
+//   event.preventDefault();
+//   if(document.getElementBy('vegetarian').checked){
+//     console.log(document.getElementByValue('vegetarian').value);
+//   };
+//   getApi(foodUrl);
+// }
+
 // overarching fucntion for when button is pressed that calls the other fucntions
 // change to .on?
 button.addEventListener("click", getRecipe)
@@ -43,13 +44,22 @@ function getApi(foodUrl) {
     })
     .then(function (data) {
       // Make sure to look at the response in the console and read how 404 response is structured.
-      console.log(data); //when you start building the html in js
+        console.log(data); //when you start building the html in js
       recipesArray.push(data.hits); // puts all 20 recipes into an array
-      console.log(recipesArray);
-      recipeArray.push(recipesArray[0][0]);//
-      console.log(recipeArray);
-      // checkHealthLabels(recipeArray);
-
+        console.log(recipesArray);
+      recipeArray.push(recipesArray[0][0]); //puts a single recipe into an array from the recipesArray
+        console.log(recipeArray);
+      checkHealthLabels(recipeArray); //this checks to see if the recipe has the vegetarian health label with true or false
+      var recipeLabel = recipeArray[0].recipe.label; //gets label of recipe
+        console.log(recipeLabel);
+      // below gets the small image url
+      // RUGULAR and THUMBNAIL option to test out if small doesnt fit well (images.[insert size] each have their respective heights and widths too)
+      var recipeImage = recipeArray[0].recipe.images.SMALL.url;
+        console.log(recipeImage);
+      var recipeSource = recipeArray[0].recipe.url; // ulr to the recipe
+        console.log(recipeSource);
+      var recipeIngredients = recipeArray[0].recipe.ingredientLines; //gets ingredients in the for of an array
+        console.log(recipeIngredients);
     });
 }
 getApi(foodUrl);
@@ -59,25 +69,8 @@ function checkHealthLabels(recipeArray){
   var healthLabel = recipeArray[0].recipe.healthLabels;
   console.log(healthLabel);
   var vegetarian = healthLabel.includes('Vegetarian');
-  console.log(vegetarian);
+  console.log('is vegetarian: '+ vegetarian);
 };
-
-function getRecipeLabel(){
-
-};
-// image and source are both urls but diffrent locations
-function getImage(){};
-
-function getSource(){};
-
-function getIngredients(){};
-
-
-
-
-
-
-
 
 //drinks- same as above
 //add click event
