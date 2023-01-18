@@ -1,16 +1,13 @@
+//will need to update alcohol type with drinkSelection variable later
 var something = "";
 var drinkUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${something}`;
-//will need to update alcohol type with drinkSelection variable later
-//create vars for appending recipes later on
-var recipeTitle = document.getElementById("recipe-title");
-var ingredientContainer = document.getElementById("ingredients");
-//console.log(recipeTitle)
+var recipeTitle = document.getElementById("drink-title");
+var ingredientContainer = document.getElementById("drink-ingredients");
 
 function getDrink() {
-  // Getting the value of the user's drink selection based on which radio button they picked
+  // getting the value of the user's drink selection based on which radio button they picked
   drinkSelection = $("input[name=answer]:checked").val();
-  console.log(drinkSelection);
-  // adding drinkSelection to the drinkUrl
+  // updating the API with the drink selection chosen by user
   var drinkUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${drinkSelection}`;
   // }
   // we kicked this Async operation off right away
@@ -32,79 +29,73 @@ function getDrink() {
     //the response object in javascript
     //we need to pull out the info we need from data- data is our js object
     .then(function (data) {
-      console.log(data);
       //Randomizing the drink selection//
       var randomDrink = Math.floor(Math.random() * data.drinks.length);
-      console.log(randomDrink);
       // the data returns a value idDrink and then we can use a new API endpoint to search by idDrink
       //set the random drink's ID into a variable
-      //need to use ID and not drink name because of the underscore problem in the url
       idDrink = data.drinks[randomDrink].idDrink;
-      console.log(idDrink);
-      drinkName = data.drinks[randomDrink].strDrink; //stDrink taken from the data object
-      console.log(drinkName);
+      drinkName = data.drinks[randomDrink].strDrink; //strDrink is taken from the data object
       drinkImg = data.drinks[randomDrink].strDrinkThumb; //grabs the drink image
-
-      //new API endpoint where you can use drink ID from the previous call
+      //new API endpoint where we can use drink's ID from the previous call
       var drinkByIdUrl =
         "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + idDrink;
-      console.log(drinkByIdUrl);
       getIngredients(drinkByIdUrl);
     })
-    // IF we have an ERROR in our API request (it gets handled here)
+    // IF we have an ERROR in our API request (it get's handled here)
     .catch(function (error) {
       console.log(error);
     });
 }
-//need to get the Ingredients to append to the page
+//need to get the Ingredients
 function getIngredients(drinkByIdUrl) {
   fetch(drinkByIdUrl)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
-
       recipeTitle.textContent = data.drinks[0].strDrink;
+      instructions = data.drinks[0].strInstructions;
 
-      //need to loop through the 15 possible ingredients and measurements
-      //need to check if they are == null??
-      for (var i = 1; i <= 15; i++) {
+      //need to get the ingredients and measurements from a different endpoint that has the drink ID
+      //need to loop through the 16 ingredients and measurements
+      //need to check if they are == null and break the loop if they are
+      for (var i = 1; i < 16; i++) {
         ingredient = data.drinks[0]["strIngredient" + i];
         unit = data.drinks[0]["strMeasure" + i];
-        console.log(ingredient, unit);
+
         // breakout condition
         if (ingredient == null) {
-          console.log("Not more ingredients");
           break;
         }
 
-        let newcontentContainer = document.createElement("div");
-        newcontentContainer.setAttribute("class", "bingo");
-        // dynamically create new elements with classes/id's data
-        let tempIngredient = document.createElement("li");
-        tempIngredient.setAttribute("class", "ingredient-item");
-        tempIngredient.textContent = ingredient;
+        // adds image to the page
+        var tempImage = document.getElementById("drink-image");
+        tempImage.setAttribute("src", drinkImg);
 
-        let tempIngredientAmt = document.createElement("li");
+        var newcontentContainer = document.createElement("div");
+        newcontentContainer.setAttribute("class", "bingo");
+        // dynamically create new elements with classes for styling
+        var tempIngredientAmt = document.createElement("li");
         tempIngredientAmt.setAttribute("class", "ingredient-amount");
         tempIngredientAmt.textContent = unit;
-        // tempIngredient.innerHTML = "<li>Ingredient: "
 
-        console.log(tempIngredient);
-        console.log(tempIngredientAmt);
-        // once the new elements are created WE HAVE TO ADD THEM TO THE DOM/BROWSER
-        newcontentContainer.append(tempIngredient, tempIngredientAmt);
+        var tempIngredient = document.createElement("li");
+        tempIngredient.setAttribute("class", "ingredient-item");
+        tempIngredient.textContent = ingredient;
+        //new paragraph element for the instructions
+        var tempInstructions = document.getElementById("instructions");
+        tempInstructions.textContent = instructions;
+
+        // once the new elements are created we have to add them to the DOM
+        newcontentContainer.append(tempIngredientAmt, tempIngredient);
         ingredientContainer.append(newcontentContainer);
       }
     });
 }
 
-//add click event to getDrink--need to double check on this
+//add click event to the functions but not sure which one? getDrink or getIngredients?
 var drinkButton = document.getElementById("cocktail");
 drinkButton.addEventListener("click", getDrink);
-
-// //displaying the recipes on the page
 
 // //local storage-previous searches
 // // localStorage.setItem(key, value).JSON.stringify(recipeArray);
