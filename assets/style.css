@@ -4,16 +4,17 @@
     color: black;
 }
 .title{
-    color:white;
+    color:whitesmoke;
     font-family: cursive;
+}
+img{
+    background-image: url("../assets/images/peard.jpg");
 }
 
 .button{
     background-color: hsl(0, 90%, 96%);
     color:black;
     border-radius: 20px;
-
-    
 }
 
 .button:hover {
