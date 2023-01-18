@@ -6,7 +6,7 @@ var ingredientContainer = document.getElementById("drink-ingredients");
 
 function getDrink() {
   // getting the value of the user's drink selection based on which radio button they picked
-  drinkSelection = $("input[name=answer]:checked").val();
+  drinkSelection = $("input[name=drink]:checked").val();
   // updating the API with the drink selection chosen by user
   var drinkUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${drinkSelection}`;
   // }
