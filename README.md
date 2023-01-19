@@ -40,9 +40,9 @@ Pear'd provides images, ingredients list, and recipes with 2 clicks of a button.
 
 ### <ins>[Pear'd](https://sampaul10.github.io/Pear-d/)</ins>
 
-<br>
+## Screenshot
+![image](https://user-images.githubusercontent.com/117120566/213583512-4a061003-392a-4ceb-9427-28625e6de603.png)
 
-![Preview of homepage](./assets/Images/img-444.png)
 
 ## Contributions
 Lauren Szalkiewicz : [Github Page](https://github.com/laurszalk)<br>
