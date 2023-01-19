@@ -39,5 +39,6 @@ Pear'd provides images, ingredients list, and recipes with 2 clicks of a button.
 
  ##Sample of page
 ![Pear'd](https://user-images.githubusercontent.com/117120566/213563977-6180d38a-085f-4cdf-b5fe-d5a09b3989e5.png)
+![Pear'd-choices](https://user-images.githubusercontent.com/117120566/213565126-b998559b-6f92-4d3d-bcb6-38b25802ad2a.png)
 
  Link to deployed application.
