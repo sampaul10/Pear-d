@@ -55,10 +55,12 @@ function getIngredients(drinkByIdUrl) {
     .then(function (data) {
       recipeTitle.textContent = data.drinks[0].strDrink;
       instructions = data.drinks[0].strInstructions;
+      console.log(data);
 
       //need to get the ingredients and measurements from a different endpoint that has the drink ID
       //need to loop through the 16 ingredients and measurements
       //need to check if they are == null and break the loop if they are
+      ingredientContainer.textContent = "";
       for (var i = 1; i < 16; i++) {
         ingredient = data.drinks[0]["strIngredient" + i];
         unit = data.drinks[0]["strMeasure" + i];
