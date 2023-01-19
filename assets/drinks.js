@@ -4,7 +4,10 @@ var drinkUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${somet
 var recipeTitle = document.getElementById("drink-title");
 var ingredientContainer = document.getElementById("drink-ingredients");
 
-function getDrink() {
+function getDrink(event) {
+  event.preventDefault();
+  var hideDrink = document.getElementById("hideDrink");
+  hideDrink.classList.remove("is-hidden");
   // getting the value of the user's drink selection based on which radio button they picked
   drinkSelection = $("input[name=drink]:checked").val();
   // updating the API with the drink selection chosen by user

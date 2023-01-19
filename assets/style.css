@@ -6,9 +6,7 @@
   color: whitesmoke;
   font-family: cursive;
 }
-img {
-  background-image: url("../assets/images/peard.jpg");
-}
+
 
 .button {
   background-color: hsl(0, 90%, 96%);
@@ -29,10 +27,10 @@ img {
 
 .card {
   background-image: olive;
-  background-color: rgb(190, 190, 105);
+  background-color: rgb(190, 190, 105, 0.8);
   text-align: left;
   color: black;
-  opacity: 0.8;
+  
 }
 
 .header-image {
@@ -44,7 +42,10 @@ img {
   background-color: #999;
   font-family: cursive;
 }
-
-body {
-  background-image: url("../assets/images/img-111.jpg");
+.bingo {
+  display: flex;
 }
+
+.ingredient-item {
+  margin-left: 4px;
+} 

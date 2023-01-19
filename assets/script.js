@@ -17,6 +17,8 @@ var foodLink = document.getElementById('food recipe');
 // get checked value CURRENTLY NOT IN USE/FUNCTIONAL
 function getRecipe(event){
   event.preventDefault();
+  var hideFood = document.getElementById("hideFood");
+  hideFood.classList.remove("is-hidden");
   foodSelection = $("input[name=food]:checked").val();
   getApi(foodSelection);
 };
