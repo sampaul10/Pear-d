@@ -17,6 +17,8 @@ var foodLink = document.getElementById('food recipe');
 // get checked value CURRENTLY NOT IN USE/FUNCTIONAL
 function getRecipe(event){
   event.preventDefault();
+  var hideFood = document.getElementById("hideFood");
+  hideFood.classList.remove("is-hidden");
   foodSelection = $("input[name=food]:checked").val();
   getApi(foodSelection);
 };
@@ -54,12 +56,12 @@ function getApi(foodSelection) {
       var recipeSource = recipeArray[0].recipe.url; // ulr to the recipe
         foodLink.href = recipeSource; // make it so that the link display in seperate window??
       var recipeIngredients = recipeArray[0].recipe.ingredientLines; //gets ingredients in the for of an array
-        console.log(recipeIngredients);
-        printIngredients(recipeIngredients); //prints all the ingredient in a list to the html
+        appendIngredients(recipeIngredients); //prints all the ingredient in a list to the html
     });
 }
 
 function appendIngredients(array){
+  ingredientList.textContent = '';
   for(i=0; i<array.length;i++){
     var li = document.createElement('li');
     li.setAttribute('id','food-ingredient');
@@ -67,32 +69,5 @@ function appendIngredients(array){
     ingredientList.appendChild(li);
   };
 };
-
-function removeIngredients(){
-  var parent = document.getElementById('food-ingredients');
-  var child = parent.lastElementChild;
-  while(child){
-  parent.removeChild(child);
-  child = parent.lastElementChild;
-  };
-};
-
-function printIngredients(array){
-  var listCheck = document.getElementById('food-ingredient');
-  if(listCheck == null){
-    appendIngredients(array);
-  } else {
-    removeIngredients();
-    appendIngredients(array);
-    };
-};
-
-// this is only to check if it has vegetarian or not (true or false) NOT IN USE????
-// function checkHealthLabels(recipeArray){
-//   var healthLabel = recipeArray[0].recipe.healthLabels;
-//   console.log(healthLabel);
-//   var vegetarian = healthLabel.includes('Vegetarian');
-//   console.log('is vegetarian: '+ vegetarian);
-// };
 
 //local storage-previous searches

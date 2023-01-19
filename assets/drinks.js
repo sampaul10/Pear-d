@@ -4,7 +4,10 @@ var drinkUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${somet
 var recipeTitle = document.getElementById("drink-title");
 var ingredientContainer = document.getElementById("drink-ingredients");
 
-function getDrink() {
+function getDrink(event) {
+  event.preventDefault();
+  var hideDrink = document.getElementById("hideDrink");
+  hideDrink.classList.remove("is-hidden");
   // getting the value of the user's drink selection based on which radio button they picked
   drinkSelection = $("input[name=drink]:checked").val();
   // updating the API with the drink selection chosen by user
@@ -55,10 +58,12 @@ function getIngredients(drinkByIdUrl) {
     .then(function (data) {
       recipeTitle.textContent = data.drinks[0].strDrink;
       instructions = data.drinks[0].strInstructions;
+      console.log(data);
 
       //need to get the ingredients and measurements from a different endpoint that has the drink ID
       //need to loop through the 16 ingredients and measurements
       //need to check if they are == null and break the loop if they are
+      ingredientContainer.textContent = "";
       for (var i = 1; i < 16; i++) {
         ingredient = data.drinks[0]["strIngredient" + i];
         unit = data.drinks[0]["strMeasure" + i];
