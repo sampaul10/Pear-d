@@ -36,10 +36,17 @@ Pear'd provides images, ingredients list, and recipes with 2 clicks of a button.
  * Create a search function that can increase search for a specific dish.
  * Option to comment and rate recipies.
 
-## Link to deployed application
- https://sampaul10.github.io/Pear-d/
+## Wesbite Preview
 
+### <ins>[Pear'd](https://sampaul10.github.io/Pear-d/)</ins>
 
-## Sample of page
-![Pear'd](https://user-images.githubusercontent.com/117120566/213563977-6180d38a-085f-4cdf-b5fe-d5a09b3989e5.png)
-![Pear'd-choices](https://user-images.githubusercontent.com/117120566/213565126-b998559b-6f92-4d3d-bcb6-38b25802ad2a.png)
+<br>
+
+![Preview of homepage](./assets/Images/img-444.png)
+
+## Contributions
+Lauren Szalkiewicz : [Github Page](https://github.com/laurszalk)<br>
+Austin Stancil : [Github Page](https://github.com/AustinS86)<br>
+Neel Chakravartty: [Github Page](https://github.com/NeelCheo)<br>
+Samson Paul: [Github Page](https://github.com/sampaul10)<br>
+Khamla Soumpholphakdy: [Github Page](https://github.com/soumpholphakdy)
