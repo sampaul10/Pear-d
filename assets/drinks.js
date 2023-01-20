@@ -40,6 +40,7 @@ function getDrink(event) {
       drinkName = data.drinks[randomDrink].strDrink; //strDrink is taken from the data object
       drinkImg = data.drinks[randomDrink].strDrinkThumb; //grabs the drink image
       //new API endpoint where we can use drink's ID from the previous call
+      localStorage.setItem("drinkName", JSON.stringify(drinkName));//locally stores last item.
       var drinkByIdUrl =
         "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + idDrink;
       getIngredients(drinkByIdUrl);

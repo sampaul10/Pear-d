@@ -57,6 +57,7 @@ function getApi(foodSelection) {
         foodLink.href = recipeSource; // make it so that the link display in seperate window??
       var recipeIngredients = recipeArray[0].recipe.ingredientLines; //gets ingredients in the for of an array
         appendIngredients(recipeIngredients); //prints all the ingredient in a list to the html
+        localStorage.setItem("mealName", JSON.stringify(recipeLabel));//locally stores last item.
     });
 }
 
