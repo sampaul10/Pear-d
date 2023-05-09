@@ -30,17 +30,24 @@ Pear'd provides images, ingredients list, and recipes with 2 clicks of a button.
  ## Future Advancement
 
  * Add map options to locate a restaurant that matches your food choice.
- * Partner with Instakart, Grubhub, or Peapod to have ingredients and groceries delivered.
+ * Partner with Instacart or Peapod to have ingredients and groceries delivered.
  * Video tutorials for both food and drink options.
  * Have local storage so that you search history saves on the page.
  * Create a search function that can increase search for a specific dish.
  * Option to comment and rate recipies.
 
 
+## Wesbite Preview
 
+### <ins>[Pear'd](https://sampaul10.github.io/Pear-d/)</ins>
 
+<br>
 
+![Preview of homepage](./assets/Images/img-444.png)
 
- Sample of page
-
- Link to deployed application.
+## Contributions
+Lauren Szalkiewicz : [Github Page](https://github.com/laurszalk)<br>
+Austin Stancil : [Github Page](https://github.com/AustinS86)<br>
+Neel Chakravartty: [Github Page](https://github.com/NeelCheo)<br>
+Samson Paul: [Github Page](https://github.com/sampaul10)<br>
+Khamla Soumpholphakdy: [Github Page](https://github.com/soumpholphakdy)
